@@ -1,0 +1,86 @@
+$green: #373;
+$red: #A33;
+$light_red: #ffdddd;
+$black: #121212;
+$grey: #676767;
+
+$base-color: #eaeaea;
+$active-color: $red;
+
+$base-gradient: 'flat';
+
+@import 'sencha-touch/default/all';
+
+@include sencha-panel;
+@include sencha-buttons;
+/*@include sencha-sheet;*/
+/*@include sencha-picker;*/
+/*@include sencha-toolbar-forms;*/
+@include sencha-tabs;
+@include sencha-toolbar;
+/*@include sencha-carousel;*/
+/*@include sencha-indexbar;*/
+@include sencha-list;
+@include sencha-layout;
+/*@include sencha-form;*/
+@include sencha-loading-spinner;
+
+
+@include pictos-iconmask('data');
+@include pictos-iconmask('datum');
+
+//Homecard and popular card
+.homecard, .noun_detail, .collector_detail {
+  background-color: white;
+}
+
+ul.phrases {
+  margin: 1.2em;
+  font-style: italic;
+  font-family: Palatino, Times, serif;
+
+  li {
+    display: inline;
+    padding-right: 0.5em;
+  }
+
+  a { text-decoration: none; }
+  a.noun { color: $black }
+  a.collector { color: $red }
+
+}
+
+.x-portrait ul.phrases {
+  font-size: 0.85em
+}
+.x-landscape ul.phrases {
+  font-size: 1em
+}
+.x-ipad  ul.phrases {
+  font-size: 200%
+}
+.x-desktop  ul.phrases {
+  font-size: 150%
+}
+
+
+ol.league {
+  margin: 1.2em;
+  margin-left: 3.4em;
+  font-style: italic;
+  font-family: Palatino, Times, serif;
+  font-size: 1em;
+  display: block;
+  list-style-type: decimal;
+  list-style-position: inside;
+
+  li {
+    list-style-type: lower-roman;
+    padding-right: 0.5em;
+  }
+
+  a { text-decoration: none;  color: $black }
+}
+
+.noun_detail ol.league a.collector { color: $green }
+.collector_detail ol.league a.noun { color: $green }
