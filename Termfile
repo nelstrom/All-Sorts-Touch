@@ -1,0 +1,17 @@
+# COMMENT OF SCRIPT HERE
+# you can make as many tabs as you wish...
+# tab names are actually arbitrary at this point too.
+
+setup 'echo "setup"'
+
+
+tab "Server" do
+  run 'cd public'
+  run "serve"
+end
+
+tab "Compass" do
+  run 'cd theming'
+  run 'compass watch'
+end
+
