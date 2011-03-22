@@ -1,8 +1,8 @@
 App.home_store = new Ext.data.Store({
     model: 'Suggestion',
     proxy: {
-        type: 'ajax',
-        url : '/touch/home.json',
+        type: 'scripttag',
+        url : App.domain + '/touch/home.json',
         reader: {
             type: 'json',
             root: ''
