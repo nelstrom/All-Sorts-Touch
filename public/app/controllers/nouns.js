@@ -5,7 +5,7 @@ Ext.regController("nouns", {
     index: function(options) {
         var letter = options.letter;
         if (typeof(letter) != "undefined") {
-            App.alphabeticised_nouns.proxy.url = '/touch/nouns/by/'+letter+'.json'
+            App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
             App.alphabeticised_nouns.load();
             this.updateButtons(letter);
             this.currentLetter = letter;
@@ -19,7 +19,7 @@ Ext.regController("nouns", {
     },
 
     show: function(options) {
-        App.noun_detail.proxy.url = "/touch/nouns/" + options.slug + ".json";
+        App.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
         App.noun_detail.load();
         // Note: activate viewport THEN nounscard (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nounscard);
