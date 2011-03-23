@@ -1,0 +1,5 @@
+[_] JS compilation
+	[X] create minified version (use with index.html)
+	[_] create /develop.html with uncompressed JS/CSS
+[_] SCSS compilation
+	[_] watch one file, but generate 2 styles
