@@ -1,5 +1,12 @@
-[_] JS compilation
+[_] App
+	[_] don't show prev/next buttons on noun detail card
+	[_] add a back button to noun detail card
+		[X] text 'back', using browser history
+		[_] do not show if there is nothing to go 'back' to
+		[_] pressing 'back' should switch to list view without AJAX request
+
+[X] JS compilation
 	[X] create minified version (use with index.html)
-	[_] create /develop.html with uncompressed JS/CSS
+	[X] create /develop.html with uncompressed JS/CSS
 [_] SCSS compilation
 	[_] watch one file, but generate 2 styles
