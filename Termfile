@@ -1,9 +1,4 @@
-# COMMENT OF SCRIPT HERE
-# you can make as many tabs as you wish...
-# tab names are actually arbitrary at this point too.
-
 setup 'echo "setup"'
-
 
 tab "Server" do
   run 'cd public'
@@ -15,3 +10,6 @@ tab "Compass" do
   run 'compass watch'
 end
 
+tab "Watchr" do
+  run 'watchr js-live-compiler.rb'
+end
