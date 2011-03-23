@@ -2,8 +2,9 @@
 	[_] don't show prev/next buttons on noun detail card
 	[_] add a back button to noun detail card
 		[X] text 'back', using browser history
+		[X] pressing 'back' should switch to list view without AJAX request
+		[X] switching letters of alphabet should reset the scrolling
 		[_] do not show if there is nothing to go 'back' to
-		[_] pressing 'back' should switch to list view without AJAX request
 
 [X] JS compilation
 	[X] create minified version (use with index.html)

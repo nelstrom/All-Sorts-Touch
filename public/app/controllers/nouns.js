@@ -10,6 +10,9 @@ Ext.regController("nouns", {
                 App.alphabeticised_nouns.load();
                 this.updateButtons(letter);
                 this.currentLetter = letter;
+                if (typeof(App.views.noun_list.scroller) != "undefined") {
+                    App.views.noun_list.scroller.scrollTo({x: 0, y: 0});
+                }
             }
         } else {
             this.updateButtons(this.currentLetter);
