@@ -1,10 +1,21 @@
 [_] App
-	[_] don't show prev/next buttons on noun detail card
+	[X] don't show prev/next buttons on noun detail card
 	[_] add a back button to noun detail card
 		[X] text 'back', using browser history
 		[X] pressing 'back' should switch to list view without AJAX request
 		[X] switching letters of alphabet should reset the scrolling
 		[_] do not show if there is nothing to go 'back' to
+	[_] refactor noun views/controller
+	[_] info on noun detail card
+		[_] seeded by ...
+		[_] liked by ...
+	[_] info on noun listings
+		[_] number of suggestions
+	[_] create collector detail card
+	[_] add icons
+		[_] favicon
+		[_] homescreen icon
+		[_] splashes
 
 [X] JS compilation
 	[X] create minified version (use with index.html)
