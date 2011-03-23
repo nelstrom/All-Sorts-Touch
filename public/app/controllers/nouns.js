@@ -21,9 +21,17 @@ Ext.regController("nouns", {
     show: function(options) {
         App.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
         App.noun_detail.load();
+        this.hideButtons();
         // Note: activate viewport THEN nounscard (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nounscard);
         App.views.nounscard.setActiveItem(App.views.noun_detail_card);
+    },
+
+    hideButtons: function() {
+        var prevButton = Ext.getCmp("prev_noun_letter_button"),
+            nextButton = Ext.getCmp("next_noun_letter_button");
+        prevButton.hide();
+        nextButton.hide();
     },
 
     updateButtons: function(letter) {
@@ -35,6 +43,9 @@ Ext.regController("nouns", {
         currentLetterIndex = alphabet.indexOf(letter);
         prevLetterIndex = currentLetterIndex - 1;
         nextLetterIndex = currentLetterIndex + 1;
+
+        prevButton.show();
+        nextButton.show();
 
         prevButton.handler = function() {
             Ext.dispatch({
