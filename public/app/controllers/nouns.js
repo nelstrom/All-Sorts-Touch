@@ -5,10 +5,12 @@ Ext.regController("nouns", {
     index: function(options) {
         var letter = options.letter;
         if (typeof(letter) != "undefined") {
-            App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
-            App.alphabeticised_nouns.load();
-            this.updateButtons(letter);
-            this.currentLetter = letter;
+            if (letter != this.currentLetter) {
+                App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
+                App.alphabeticised_nouns.load();
+                this.updateButtons(letter);
+                this.currentLetter = letter;
+            }
         } else {
             this.updateButtons(this.currentLetter);
         }
