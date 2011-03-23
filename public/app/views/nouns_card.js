@@ -1,6 +1,15 @@
 App.views.nouns_toolbar = new Ext.Toolbar({
     title: "Nouns",
     items: [
+        {
+            id: 'back_button',
+            text: 'back',
+            ui: 'back',
+            hidden: true,
+            handler: function() {
+                window.history.back();
+            }
+        },
         {xtype: 'spacer'},
         {
             xtype: 'segmentedbutton',

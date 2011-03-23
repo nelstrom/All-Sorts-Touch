@@ -29,14 +29,17 @@ Ext.regController("nouns", {
 
     hideButtons: function() {
         var prevButton = Ext.getCmp("prev_noun_letter_button"),
-            nextButton = Ext.getCmp("next_noun_letter_button");
+            nextButton = Ext.getCmp("next_noun_letter_button"),
+            backButton = Ext.getCmp("back_button");
         prevButton.hide();
         nextButton.hide();
+        backButton.show();
     },
 
     updateButtons: function(letter) {
         var prevButton = Ext.getCmp("prev_noun_letter_button"),
             nextButton = Ext.getCmp("next_noun_letter_button"),
+            backButton = Ext.getCmp("back_button"),
             alphabet = "abcdefghijklmnopqrstuvwxyz",
             prevLetterIndex, nextLetterIndex, currentLetterIndex;
 
@@ -46,6 +49,7 @@ Ext.regController("nouns", {
 
         prevButton.show();
         nextButton.show();
+        backButton.hide();
 
         prevButton.handler = function() {
             Ext.dispatch({
