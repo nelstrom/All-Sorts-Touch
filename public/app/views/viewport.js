@@ -18,7 +18,7 @@ App.views.Viewport = Ext.extend(Ext.TabPanel, {
                 App.views.homecard,
                 App.views.popularcard,
                 App.views.nounscard,
-                App.views.collectorslist,
+                App.views.collectorslist
             ]
         });
         App.views.Viewport.superclass.initComponent.apply(this, arguments);

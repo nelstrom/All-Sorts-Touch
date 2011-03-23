@@ -20,7 +20,7 @@ App.views.nouns_toolbar = new Ext.Toolbar({
                     handler: function() {
                         console.log("two pressed");
                     }
-                },
+                }
             ]
         }
     ]

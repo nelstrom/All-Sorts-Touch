@@ -3,7 +3,7 @@ App.views.NounsList = Ext.extend(Ext.List, {
     initComponent: function() {
         Ext.apply(this, {
             itemTpl: '{plural}',
-            store: App.alphabeticised_nouns,
+            store: App.alphabeticised_nouns
         });
         App.views.NounsList.superclass.initComponent.apply(this, arguments);
     },
