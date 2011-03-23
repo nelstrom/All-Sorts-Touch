@@ -1,5 +1,4 @@
 require 'rubygems'
-#require 'rack/contrib'
 require 'rack/rewrite'
 
 use Rack::Static, :urls => ['/', '/stylesheets', '/javascripts'], :root => "public"

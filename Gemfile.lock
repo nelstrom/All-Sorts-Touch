@@ -2,8 +2,6 @@ GEM
   remote: http://rubygems.org/
   specs:
     rack (1.2.0)
-    rack-contrib (1.1.0)
-      rack (>= 0.9.1)
     rack-rewrite (1.0.2)
 
 PLATFORMS
@@ -11,5 +9,4 @@ PLATFORMS
 
 DEPENDENCIES
   rack (= 1.2.0)
-  rack-contrib
   rack-rewrite
