@@ -1,18 +1,20 @@
 [_] App
-	[X] don't show prev/next buttons on noun detail card
 	[X] add a back button to noun detail card
 		[X] text 'back', using browser history
 		[X] pressing 'back' should switch to list view without AJAX request
 		[X] switching letters of alphabet should reset the scrolling
-	[_] refactor noun views/controller
 	[X] info on noun detail card
 		[X] seeded by ...
 		[X] no of votes
 		[X] liked by ...
 		[X] styling
-	[_] make sure defailt noun view doesn't override routed noun
 	[X] info on noun listings
 		[X] number of suggestions
+	[_] switch from static to sinatra
+		[_] load templates from files
+		[_] set domain from environment
+	[_] refactor noun views/controller
+	[_] make sure defailt noun view doesn't override routed noun
 	[_] create collector detail card
 	[_] add icons
 		[_] favicon
