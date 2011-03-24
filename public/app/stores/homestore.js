@@ -8,5 +8,5 @@ App.home_store = new Ext.data.Store({
             root: ''
         }
     },
-    autoLoad: true
+    autoLoad: false
 });

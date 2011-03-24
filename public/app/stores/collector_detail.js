@@ -8,6 +8,6 @@ App.collector_detail = new Ext.data.Store({
             root: ''
         }
     },
-    autoLoad: true
+    autoLoad: false
 });
 
