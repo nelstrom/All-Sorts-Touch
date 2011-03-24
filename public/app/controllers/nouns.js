@@ -7,15 +7,13 @@ Ext.regController("nouns", {
         if (typeof(letter) != "undefined" && letter != this.currentLetter) {
             App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
             App.alphabeticised_nouns.load();
-            App.views.nouns_toolbar.setupScrollerButtons(letter);
             this.currentLetter = letter;
             if (typeof(App.views.noun_list.scroller) != "undefined") {
                 App.views.noun_list.scroller.scrollTo({x: 0, y: 0});
             }
-        } else {
-            App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);
         }
 
+        App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);
         // Note: activate viewport THEN nounscard (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nounscard);
         App.views.nounscard.setActiveItem(App.views.noun_list);
