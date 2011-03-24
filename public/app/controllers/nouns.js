@@ -26,8 +26,7 @@ Ext.regController("nouns", {
         // Note: activate viewport THEN nounscard (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nounscard);
         App.views.nounscard.setActiveItem(App.views.noun_detail_card);
-    },
-
+    }
 
 
 });
