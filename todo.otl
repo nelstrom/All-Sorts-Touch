@@ -6,9 +6,10 @@
 		[X] switching letters of alphabet should reset the scrolling
 	[_] refactor noun views/controller
 	[_] info on noun detail card
-		[_] seeded by ...
-		[_] no of votes
-		[_] liked by ...
+		[X] seeded by ...
+		[X] no of votes
+		[X] liked by ...
+		[_] styling
 	[X] info on noun listings
 		[X] number of suggestions
 	[_] create collector detail card
