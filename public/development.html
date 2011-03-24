@@ -64,13 +64,14 @@
         </p>
 
         <tpl if="vote_count &amp;gt; 1">
-        <ol>
-          <tpl for="votes">
-            <li>
-              <a href="http://twitter.com/{user_name}/status/{tweet_id}">{user_name}</a>
-            </li>
-          </tpl>
-        </ol>
+          <ol>
+            <tpl for="votes">
+              <li>
+                <a href="http://twitter.com/{user_name}/status/{tweet_id}">{user_name}</a>
+              </li>
+            </tpl>
+          </ol>
+        </tpl>
       </li>
     </tpl>
   </ol>
