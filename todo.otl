@@ -11,9 +11,10 @@
 	[X] info on noun listings
 		[X] number of suggestions
 	[X] make sure defailt noun view doesn't override routed noun
-	[_] switch from static to sinatra
-		[_] load templates from files
-		[_] set domain from environment
+	[X] switch from static to sinatra
+		[X] load templates from files
+		[X] update config.ru
+		[X] set domain from environment
 	[_] refactor noun views/controller
 	[_] create collector detail card
 	[_] add icons
