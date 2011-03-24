@@ -1,8 +1,12 @@
 App = new Ext.Application({
-    name: "AllSorts",
-    defaultUrl   : 'home',
-    domain: 'http://all-sorts.org',
-    icon: 'images/icon.png',
+    name:                 'AllSorts',
+    domain:               'http://all-sorts.org',
+    defaultUrl:           'home',
+
+    tabletStartupScreen:  'tablet_startup.png',
+    phoneStartupScreen:   'phone_startup.png',
+    icon:                 'images/icon.png',
+    glossOnIcon:          false,
 
     launch: function() {
         this.views.homecard = new this.views.Homecard();
