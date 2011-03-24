@@ -1905,3 +1905,10 @@ ol.league a {
 .collector_detail ol.league a.noun {
   color: #337733;
 }
+
+/* line 89, ../../theming/all-sorts-touch.scss */
+#nounslist .x-list-item em.occurences {
+  margin-left: 0.3em;
+  color: #676767;
+  font-style: italic;
+}
