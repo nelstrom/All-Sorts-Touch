@@ -10,6 +10,14 @@ helpers do
     end.join("\n")
   end
 
+  def link_scripts
+    if production?
+      "<script src='javascripts/app.min.js' type='text/javascript' charset='utf-8'></script>"
+    else
+      sencha_app_scripts
+    end
+  end
+
   def sencha_app_scripts
     sources = ["public/app/routes.js", "public/app/app.js"]
 
@@ -22,7 +30,7 @@ helpers do
     sources.map do |file|
       source = file.sub('public/', '')
       "<script src='#{source}' type='text/javascript' charset='utf-8'></script>"
-    end.join("\n")
+    end.join("\n  ")
   end
 end
 

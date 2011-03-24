@@ -1,4 +1,4 @@
-watch('public/app/.*\.js') do |md|
+watch('public/(app|config)/.*\.js') do |md|
   puts "#{md} was changed at #{start = Time.now}"
 
   command = `java -jar closure-compiler/compiler.jar #{build_input_file_list} --js_output_file public/javascripts/app.min.js`
@@ -10,7 +10,8 @@ def all_js_resources
   sources = [
     #"public/javascripts/sencha-touch.js",
     "public/app/routes.js",
-    "public/app/app.js"
+    "public/app/app.js",
+    "public/config/production.js"
   ]
 
   %w{models stores views controllers}.each do |layer|
