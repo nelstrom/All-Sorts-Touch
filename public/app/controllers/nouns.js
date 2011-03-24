@@ -4,15 +4,13 @@ Ext.regController("nouns", {
 
     index: function(options) {
         var letter = options.letter;
-        if (typeof(letter) != "undefined") {
-            if (letter != this.currentLetter) {
-                App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
-                App.alphabeticised_nouns.load();
-                App.views.nouns_toolbar.setupScrollerButtons(letter);
-                this.currentLetter = letter;
-                if (typeof(App.views.noun_list.scroller) != "undefined") {
-                    App.views.noun_list.scroller.scrollTo({x: 0, y: 0});
-                }
+        if (typeof(letter) != "undefined" && letter != this.currentLetter) {
+            App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
+            App.alphabeticised_nouns.load();
+            App.views.nouns_toolbar.setupScrollerButtons(letter);
+            this.currentLetter = letter;
+            if (typeof(App.views.noun_list.scroller) != "undefined") {
+                App.views.noun_list.scroller.scrollTo({x: 0, y: 0});
             }
         } else {
             App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);

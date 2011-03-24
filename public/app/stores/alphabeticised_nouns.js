@@ -8,5 +8,5 @@ App.alphabeticised_nouns = new Ext.data.Store({
             root: ''
         }
     },
-    autoLoad: true
+    autoLoad: false
 });
