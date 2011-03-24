@@ -50,16 +50,27 @@
   <ol class="league">
     <tpl for=".">
       <li>
-        {article}
-        <a href="#collectors/{collector_slug}" class="collector">{collector}</a>
-        of
-        <a href="#nouns/{noun_slug}" class="noun">{noun}</a>
+        <p class="noun_phrase">
+          {article}
+          <a href="#collectors/{collector_slug}" class="collector">{collector}</a>
+          of
+          <a href="#nouns/{noun_slug}" class="noun">{noun}</a>
 
-        seeded by <a href="http://twitter.com/{seed.user_name}/status/{seed.tweet_id}">{seed.user_name}</a>
+          seeded by <a href="http://twitter.com/{seed.user_name}/status/{seed.tweet_id}">{seed.user_name}</a>
+
+          <tpl if="vote_count &amp;gt; 1">
+          #{vote_count} votes
+          </tpl>
+        </p>
 
         <tpl if="vote_count &amp;gt; 1">
-          #{vote_count} votes
-        </tpl>
+        <ol>
+          <tpl for="votes">
+            <li>
+              <a href="http://twitter.com/{user_name}/status/{tweet_id}">{user_name}</a>
+            </li>
+          </tpl>
+        </ol>
       </li>
     </tpl>
   </ol>

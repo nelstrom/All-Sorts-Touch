@@ -6,6 +6,7 @@ Ext.regModel('Suggestion', {
         { name: 'collector',       type: 'string' },
         { name: 'collector_slug',  type: 'string' },
         { name: 'vote_count',      type: 'number' },
+        { name: 'votes' },
         { name: 'seed' }
     ]
 });
