@@ -3,8 +3,8 @@ App = new Ext.Application({
     domain:               'http://all-sorts.org',
     defaultUrl:           'home',
 
-    tabletStartupScreen:  'tablet_startup.png',
-    phoneStartupScreen:   'phone_startup.png',
+    tabletStartupScreen:  'images/tablet_startup.png',
+    phoneStartupScreen:   'images/phone_startup.png',
     icon:                 'images/icon.png',
     glossOnIcon:          false,
 
