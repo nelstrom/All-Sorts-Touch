@@ -1878,35 +1878,68 @@ ul.phrases a.collector {
 ol.league {
   margin: 1.2em;
   margin-left: 3.4em;
-  font-style: italic;
   font-family: Palatino, Times, serif;
-  font-size: 1em;
+  font-size: 1.4em;
+  font-style: italic;
   display: block;
   list-style-type: decimal;
   list-style-position: inside;
+  float: left;
+  width: 100%;
 }
-/* line 77, ../../theming/all-sorts-touch.scss */
+/* line 79, ../../theming/all-sorts-touch.scss */
 ol.league li {
   list-style-type: lower-roman;
   padding-right: 0.5em;
+  float: left;
+  width: 100%;
 }
-/* line 82, ../../theming/all-sorts-touch.scss */
+/* line 85, ../../theming/all-sorts-touch.scss */
+ol.league li p.noun_phrase {
+  font-style: normal;
+}
+/* line 87, ../../theming/all-sorts-touch.scss */
+ol.league li p.noun_phrase span.seed, ol.league li p.noun_phrase span.votes {
+  font-size: 0.5em;
+}
+/* line 92, ../../theming/all-sorts-touch.scss */
+ol.league li a.status_link {
+  color: #337733;
+}
+/* line 96, ../../theming/all-sorts-touch.scss */
+ol.league li ol {
+  float: left;
+  width: 80%;
+  margin-bottom: 0.5em;
+}
+/* line 101, ../../theming/all-sorts-touch.scss */
+ol.league li ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  float: left;
+  width: auto;
+  font-size: 0.5em;
+  font-style: italic;
+}
+/* line 111, ../../theming/all-sorts-touch.scss */
 ol.league a {
   text-decoration: none;
   color: #121212;
 }
 
-/* line 85, ../../theming/all-sorts-touch.scss */
+/* line 114, ../../theming/all-sorts-touch.scss */
 .noun_detail ol.league a.collector {
+  font-style: italic;
   color: #337733;
 }
 
-/* line 86, ../../theming/all-sorts-touch.scss */
+/* line 115, ../../theming/all-sorts-touch.scss */
 .collector_detail ol.league a.noun {
+  font-style: italic;
   color: #337733;
 }
 
-/* line 89, ../../theming/all-sorts-touch.scss */
+/* line 118, ../../theming/all-sorts-touch.scss */
 #nounslist .x-list-item em.occurences {
   margin-left: 0.3em;
   color: #676767;
