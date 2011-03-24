@@ -1,10 +1,11 @@
 Ext.regController("nouns", {
     model: "Noun",
-    currentLetter: "a",
+    currentLetter: "",
 
     index: function(options) {
         var letter = options.letter;
-        if (typeof(letter) != "undefined" && letter != this.currentLetter) {
+        if (typeof(letter) == "undefined") { letter = "a"; }
+        if (letter != this.currentLetter) {
             App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
             App.alphabeticised_nouns.load();
             this.currentLetter = letter;
