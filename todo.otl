@@ -10,11 +10,11 @@
 		[X] styling
 	[X] info on noun listings
 		[X] number of suggestions
+	[X] make sure defailt noun view doesn't override routed noun
 	[_] switch from static to sinatra
 		[_] load templates from files
 		[_] set domain from environment
 	[_] refactor noun views/controller
-	[_] make sure defailt noun view doesn't override routed noun
 	[_] create collector detail card
 	[_] add icons
 		[_] favicon
