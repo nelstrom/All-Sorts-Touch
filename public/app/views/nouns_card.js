@@ -17,22 +17,58 @@ App.views.nouns_toolbar = new Ext.Toolbar({
                 {
                     id: 'prev_noun_letter_button',
                     iconCls: 'arrow_up',
-                    iconMask: true,
-                    handler: function() {
-                        console.log("one pressed");
-                    }
+                    iconMask: true
                 },
                 {
                     id: 'next_noun_letter_button',
                     iconCls: 'arrow_down',
-                    iconMask: true,
-                    handler: function() {
-                        console.log("two pressed");
-                    }
+                    iconMask: true
                 }
             ]
         }
-    ]
+    ],
+    showBackButton: function() {
+        var prevButton = Ext.getCmp("prev_noun_letter_button"),
+            nextButton = Ext.getCmp("next_noun_letter_button"),
+            backButton = Ext.getCmp("back_button");
+
+        prevButton.hide();
+        nextButton.hide();
+        backButton.show();
+    },
+
+    setupScrollerButtons: function(letter) {
+        var prevButton = Ext.getCmp("prev_noun_letter_button"),
+            nextButton = Ext.getCmp("next_noun_letter_button"),
+            backButton = Ext.getCmp("back_button"),
+            alphabet = "abcdefghijklmnopqrstuvwxyz",
+            prevLetterIndex, nextLetterIndex, currentLetterIndex;
+
+        currentLetterIndex = alphabet.indexOf(letter);
+        prevLetterIndex = currentLetterIndex - 1;
+        nextLetterIndex = currentLetterIndex + 1;
+
+        prevButton.show();
+        nextButton.show();
+        backButton.hide();
+
+        prevButton.handler = function() {
+            Ext.dispatch({
+                controller: "nouns",
+                action    : "index",
+                letter    : alphabet[prevLetterIndex],
+                historyUrl: "nouns/by/" + alphabet[prevLetterIndex]
+            });
+        }
+        nextButton.handler = function() {
+            Ext.dispatch({
+                controller: "nouns",
+                action    : "index",
+                letter    : alphabet[nextLetterIndex],
+                historyUrl: "nouns/by/" + alphabet[nextLetterIndex]
+            });
+        }
+    }
 });
 
 App.views.NounsCard = Ext.extend(Ext.Panel, {
