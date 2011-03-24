@@ -2,6 +2,7 @@ App = new Ext.Application({
     name: "AllSorts",
     defaultUrl   : 'home',
     domain: 'http://all-sorts.org',
+    icon: 'images/icon.png',
 
     launch: function() {
         this.views.homecard = new this.views.Homecard();
