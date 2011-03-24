@@ -56,6 +56,9 @@
         <a href="#nouns/{noun_slug}" class="noun">{noun}</a>
 
         seeded by {seed_user_name}
+        <tpl if="vote_count &amp;gt; 1">
+          #{vote_count} votes
+        </tpl>
       </li>
     </tpl>
   </ol>
