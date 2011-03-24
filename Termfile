@@ -1,15 +1,16 @@
-setup 'echo "setup"'
+setup do
+  run "bundle install"
+end
 
 tab "Server" do
-  run 'cd public'
-  run "serve"
+  run "ruby application.rb -p4000"
 end
 
 tab "Compass" do
-  run 'cd theming'
-  run 'compass watch'
+  run "cd theming"
+  run "compass watch"
 end
 
 tab "Watchr" do
-  run 'watchr js-live-compiler.rb'
+  run "watchr js-live-compiler.rb"
 end
