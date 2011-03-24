@@ -55,7 +55,8 @@
         of
         <a href="#nouns/{noun_slug}" class="noun">{noun}</a>
 
-        seeded by {seed_user_name}
+        seeded by <a href="http://twitter.com/{seed.user_name}/status/{seed.tweet_id}">{seed.user_name}</a>
+
         <tpl if="vote_count &amp;gt; 1">
           #{vote_count} votes
         </tpl>
