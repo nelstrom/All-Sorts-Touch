@@ -15,12 +15,17 @@
 		[X] load templates from files
 		[X] update config.ru
 		[X] set domain from environment
-	[_] refactor noun views/controller
+	[X] refactor noun views/controller
 	[_] create collector detail card
-	[_] add icons
-		[_] favicon
-		[_] homescreen icon
-		[_] splashes
+	[X] add icons
+		[X] favicon
+		[X] homescreen icon
+			: 72x72
+		[X] splashes
+			[X] phone
+				: 320x460
+			[X] tablet
+				: 768x1004
 
 [X] JS compilation
 	[X] create minified version (use with index.html)
