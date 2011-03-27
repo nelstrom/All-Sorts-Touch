@@ -67,17 +67,19 @@ ul.phrases {
 }
 
 
+.x-portrait ol.league { font-size: 0.8em; }
+.x-landscape ol.league { font-size: 1em; }
+.x-desktop ol.league, .x-ipad ol.league { font-size: 1.4em; }
+
 ol.league {
-  margin: 1.2em;
-  margin-left: 3.4em;
+  margin: 1.2em 3.4em;
   font-family: Palatino, Times, serif;
-  font-size: 1.4em;
   font-style: italic;
   display: block;
   list-style-type: decimal;
   list-style-position: inside;
   float: left;
-  width: 100%;
+  width: auto;
 
   li {
     list-style-type: lower-roman;

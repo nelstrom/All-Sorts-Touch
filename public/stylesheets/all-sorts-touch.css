@@ -5207,44 +5207,57 @@ ul.phrases a.collector {
 }
 
 /* line 70, ../../theming/all-sorts-touch.scss */
-ol.league {
-  margin: 1.2em;
-  margin-left: 3.4em;
-  font-family: Palatino, Times, serif;
+.x-portrait ol.league {
+  font-size: 0.8em;
+}
+
+/* line 71, ../../theming/all-sorts-touch.scss */
+.x-landscape ol.league {
+  font-size: 1em;
+}
+
+/* line 72, ../../theming/all-sorts-touch.scss */
+.x-desktop ol.league, .x-ipad ol.league {
   font-size: 1.4em;
+}
+
+/* line 74, ../../theming/all-sorts-touch.scss */
+ol.league {
+  margin: 1.2em 3.4em;
+  font-family: Palatino, Times, serif;
   font-style: italic;
   display: block;
   list-style-type: decimal;
   list-style-position: inside;
   float: left;
-  width: 100%;
+  width: auto;
 }
-/* line 82, ../../theming/all-sorts-touch.scss */
+/* line 84, ../../theming/all-sorts-touch.scss */
 ol.league li {
   list-style-type: lower-roman;
   padding-right: 0.5em;
   float: left;
   width: 100%;
 }
-/* line 88, ../../theming/all-sorts-touch.scss */
+/* line 90, ../../theming/all-sorts-touch.scss */
 ol.league li p.noun_phrase {
   font-style: normal;
 }
-/* line 90, ../../theming/all-sorts-touch.scss */
+/* line 92, ../../theming/all-sorts-touch.scss */
 ol.league li p.noun_phrase span.seed, ol.league li p.noun_phrase span.votes {
   font-size: 0.5em;
 }
-/* line 95, ../../theming/all-sorts-touch.scss */
+/* line 97, ../../theming/all-sorts-touch.scss */
 ol.league li a.status_link {
   color: #337733;
 }
-/* line 99, ../../theming/all-sorts-touch.scss */
+/* line 101, ../../theming/all-sorts-touch.scss */
 ol.league li ol {
   float: left;
   width: 80%;
   margin-bottom: 0.5em;
 }
-/* line 104, ../../theming/all-sorts-touch.scss */
+/* line 106, ../../theming/all-sorts-touch.scss */
 ol.league li ol li {
   list-style-type: decimal;
   list-style-position: inside;
@@ -5253,25 +5266,25 @@ ol.league li ol li {
   font-size: 0.5em;
   font-style: italic;
 }
-/* line 114, ../../theming/all-sorts-touch.scss */
+/* line 116, ../../theming/all-sorts-touch.scss */
 ol.league a {
   text-decoration: none;
   color: #121212;
 }
 
-/* line 117, ../../theming/all-sorts-touch.scss */
+/* line 119, ../../theming/all-sorts-touch.scss */
 .noun_detail ol.league a.collector {
   font-style: italic;
   color: #337733;
 }
 
-/* line 118, ../../theming/all-sorts-touch.scss */
+/* line 120, ../../theming/all-sorts-touch.scss */
 .collector_detail ol.league a.noun {
   font-style: italic;
   color: #337733;
 }
 
-/* line 121, ../../theming/all-sorts-touch.scss */
+/* line 123, ../../theming/all-sorts-touch.scss */
 #nounslist .x-list-item em.occurences {
   margin-left: 0.3em;
   color: #676767;
