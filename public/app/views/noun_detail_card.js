@@ -11,3 +11,5 @@ App.views.NounDetailCard = Ext.extend(Ext.DataView, {
         App.views.NounDetailCard.superclass.initComponent.apply(this, arguments);
     }
 });
+
+Ext.reg('noundetail', App.views.NounDetailCard);

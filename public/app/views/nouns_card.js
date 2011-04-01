@@ -83,7 +83,7 @@ App.views.NounsCard = Ext.extend(Ext.Panel, {
             ],
             items: [
                 { xtype: 'nounslist', id: 'nouns_list' },
-                App.views.noun_detail_card
+                { xtype: 'noundetail', id: 'noun_detail' },
             ]
         });
         App.views.NounsCard.superclass.initComponent.apply(this, arguments);
