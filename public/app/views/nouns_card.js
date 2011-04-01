@@ -1,4 +1,4 @@
-App.views.nouns_toolbar = new Ext.Toolbar({
+App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
     title: "Nouns",
     items: [
         {
@@ -70,6 +70,7 @@ App.views.nouns_toolbar = new Ext.Toolbar({
         }
     }
 });
+Ext.reg('nounscardtoolbar', App.views.nouns_toolbar);
 
 App.views.NounsCard = Ext.extend(Ext.Panel, {
     title: "nouns",
@@ -77,7 +78,9 @@ App.views.NounsCard = Ext.extend(Ext.Panel, {
     layout: "card",
     initComponent: function() {
         Ext.apply(this, {
-            dockedItems: [App.views.nouns_toolbar],
+            dockedItems: [
+                { xtype: 'nounscardtoolbar', id: 'nouns_toolbar' }
+            ],
             items: [
                 App.views.noun_list,
                 App.views.noun_detail_card
@@ -87,3 +90,5 @@ App.views.NounsCard = Ext.extend(Ext.Panel, {
     }
 
 });
+
+Ext.reg('nounscard', App.views.NounsCard);
