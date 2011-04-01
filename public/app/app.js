@@ -1,4 +1,4 @@
-App = new Ext.Application({
+var App = new Ext.Application({
     name:                 'AllSorts',
     domain:               'http://all-sorts.org',
     defaultUrl:           'home',
@@ -9,7 +9,6 @@ App = new Ext.Application({
     glossOnIcon:          false,
 
     launch: function() {
-        this.views.homecard = new this.views.Homecard();
 
         this.views.noun_detail_card = new this.views.NounDetailCard();
         this.views.noun_list = new this.views.NounsList();
@@ -21,13 +20,14 @@ App = new Ext.Application({
         this.views.popularcard = new this.views.Popularcard();
         this.views.viewport = new this.views.Viewport();
 
-        this.views.homecard.tab.handler = function() {
-            Ext.dispatch({
-                controller: "home",
-                action    : "index",
-                historyUrl: "home"
-            });
-        };
+        this.views.homecard = this.views.viewport.getComponent('home');
+		this.views.homecard.tab.handler = function() {
+			Ext.dispatch({
+				controller: "home",
+				action    : "index",
+				historyUrl: "home"
+			});
+		};
 
         this.views.nounscard.tab.handler = function() {
             Ext.dispatch({

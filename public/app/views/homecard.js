@@ -12,3 +12,5 @@ App.views.Homecard = Ext.extend(Ext.DataView, {
         App.views.Homecard.superclass.initComponent.apply(this, arguments);
     }
 });
+
+Ext.reg('homecard', App.views.Homecard);
