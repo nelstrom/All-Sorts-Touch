@@ -82,7 +82,7 @@ App.views.NounsCard = Ext.extend(Ext.Panel, {
                 { xtype: 'nounscardtoolbar', id: 'nouns_toolbar' }
             ],
             items: [
-                App.views.noun_list,
+                { xtype: 'nounslist', id: 'nouns_list' },
                 App.views.noun_detail_card
             ]
         });

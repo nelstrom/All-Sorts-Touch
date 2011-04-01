@@ -11,7 +11,6 @@ var App = new Ext.Application({
     launch: function() {
 
         this.views.noun_detail_card = new this.views.NounDetailCard();
-        this.views.noun_list = new this.views.NounsList();
 
         this.views.collector_detail_card = new this.views.CollectorDetailCard();
         this.views.collectorslist = new this.views.Collectorslist();
@@ -29,6 +28,7 @@ var App = new Ext.Application({
 
         this.views.nounscard = this.views.viewport.getComponent('nouns');
         this.views.nouns_toolbar = this.views.nounscard.getComponent('nouns_toolbar');
+        this.views.noun_list = this.views.nounscard.getComponent('nouns_list');
         this.views.nounscard.tab.handler = function() {
             Ext.dispatch({
                 controller: "nouns",

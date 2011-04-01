@@ -23,3 +23,5 @@ App.views.NounsList = Ext.extend(Ext.List, {
         });
     }
 });
+
+Ext.reg('nounslist', App.views.NounsList);
