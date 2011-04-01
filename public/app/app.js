@@ -17,17 +17,16 @@ var App = new Ext.Application({
         this.views.collector_detail_card = new this.views.CollectorDetailCard();
         this.views.collectorslist = new this.views.Collectorslist();
 
-        this.views.popularcard = new this.views.Popularcard();
         this.views.viewport = new this.views.Viewport();
 
         this.views.homecard = this.views.viewport.getComponent('home');
-		this.views.homecard.tab.handler = function() {
-			Ext.dispatch({
-				controller: "home",
-				action    : "index",
-				historyUrl: "home"
-			});
-		};
+        this.views.homecard.tab.handler = function() {
+            Ext.dispatch({
+                controller: "home",
+                action    : "index",
+                historyUrl: "home"
+            });
+        };
 
         this.views.nounscard.tab.handler = function() {
             Ext.dispatch({
@@ -45,6 +44,7 @@ var App = new Ext.Application({
             });
         };
 
+        this.views.popularcard = this.views.viewport.getComponent('popular');
         this.views.popularcard.tab.handler = function() {
             Ext.dispatch({
                 controller: "home",

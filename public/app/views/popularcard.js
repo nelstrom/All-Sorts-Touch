@@ -12,3 +12,5 @@ App.views.Popularcard = Ext.extend(Ext.DataView, {
         App.views.Popularcard.superclass.initComponent.apply(this, arguments);
     }
 });
+
+Ext.reg('popularcard', App.views.Popularcard);
