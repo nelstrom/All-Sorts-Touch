@@ -1,3 +1,10 @@
+[_] Refactor
+	[_] register xtypes for customized panels
+	[_] standardise naming for noun cards
+	: need convention for filename, classname, instance and id
+		[_] outer
+		[_] list
+		[_] detail
 [_] App
 	[X] add a back button to noun detail card
 		[X] text 'back', using browser history
