@@ -15,18 +15,18 @@ App.controllers.nouns = Ext.regController("nouns", {
         }
 
         App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);
-        // Note: activate viewport THEN nounscard (other way doesn't work)
-        App.views.viewport.setActiveItem(App.views.nounscard);
-        App.views.nounscard.setActiveItem(App.views.noun_list);
+        // Note: activate viewport THEN nouns_packet (other way doesn't work)
+        App.views.viewport.setActiveItem(App.views.nouns_packet);
+        App.views.nouns_packet.setActiveItem(App.views.noun_list);
     },
 
     show: function(options) {
         App.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
         App.noun_detail.load();
         App.views.nouns_toolbar.showBackButton();
-        // Note: activate viewport THEN nounscard (other way doesn't work)
-        App.views.viewport.setActiveItem(App.views.nounscard);
-        App.views.nounscard.setActiveItem(App.views.noun_detail_card);
+        // Note: activate viewport THEN nouns_packet (other way doesn't work)
+        App.views.viewport.setActiveItem(App.views.nouns_packet);
+        App.views.nouns_packet.setActiveItem(App.views.noun_detail);
     }
 
 

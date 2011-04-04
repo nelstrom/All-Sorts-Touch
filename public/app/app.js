@@ -25,11 +25,11 @@ var App = new Ext.Application({
             });
         };
 
-        this.views.nounscard = this.views.viewport.getComponent('nouns');
-        this.views.nouns_toolbar = this.views.nounscard.getComponent('nouns_toolbar');
-        this.views.noun_list = this.views.nounscard.getComponent('nouns_list');
-        this.views.noun_detail_card = this.views.nounscard.getComponent('noun_detail');
-        this.views.nounscard.tab.handler = function() {
+        this.views.nouns_packet = this.views.viewport.getComponent('nouns');
+        this.views.nouns_toolbar = this.views.nouns_packet.getComponent('nouns_toolbar');
+        this.views.nouns_list = this.views.nouns_packet.getComponent('nouns_list');
+        this.views.noun_detail = this.views.nouns_packet.getComponent('noun_detail');
+        this.views.nouns_packet.tab.handler = function() {
             Ext.dispatch({
                 controller: "nouns",
                 action    : "index",

@@ -1,5 +1,5 @@
 App.views.NounsList = Ext.extend(Ext.List, {
-    id: "nounslist",
+    id: "nouns_list",
     title: "nouns",
     initComponent: function() {
         Ext.apply(this, {
@@ -24,4 +24,4 @@ App.views.NounsList = Ext.extend(Ext.List, {
     }
 });
 
-Ext.reg('nounslist', App.views.NounsList);
+Ext.reg('nouns_list', App.views.NounsList);

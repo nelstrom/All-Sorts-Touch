@@ -17,7 +17,7 @@ App.views.Viewport = Ext.extend(Ext.TabPanel, {
             items: [
                 { xtype: 'homecard', id: 'home' },
                 { xtype: 'popularcard', id: 'popular' },
-                { xtype: 'nounscard', id: 'nouns' },
+                { xtype: 'nouns_packet', id: 'nouns' },
                 App.views.collectorslist
             ]
         });

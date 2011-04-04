@@ -1,4 +1,4 @@
-App.views.NounDetailCard = Ext.extend(Ext.DataView, {
+App.views.NounDetail = Ext.extend(Ext.DataView, {
     title: "detail",
     cls: "noun_detail",
     scroll: "vertical",
@@ -8,8 +8,8 @@ App.views.NounDetailCard = Ext.extend(Ext.DataView, {
             itemSelector: 'a.noun',
             store: App.noun_detail
         });
-        App.views.NounDetailCard.superclass.initComponent.apply(this, arguments);
+        App.views.NounDetail.superclass.initComponent.apply(this, arguments);
     }
 });
 
-Ext.reg('noundetail', App.views.NounDetailCard);
+Ext.reg('noun_detail', App.views.NounDetail);

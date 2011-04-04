@@ -72,7 +72,7 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
 });
 Ext.reg('nounscardtoolbar', App.views.nouns_toolbar);
 
-App.views.NounsCard = Ext.extend(Ext.Panel, {
+App.views.NounsPacket = Ext.extend(Ext.Panel, {
     title: "nouns",
     iconCls: "datum",
     layout: "card",
@@ -82,13 +82,13 @@ App.views.NounsCard = Ext.extend(Ext.Panel, {
                 { xtype: 'nounscardtoolbar', id: 'nouns_toolbar' }
             ],
             items: [
-                { xtype: 'nounslist', id: 'nouns_list' },
-                { xtype: 'noundetail', id: 'noun_detail' },
+                { xtype: 'nouns_list', id: 'nouns_list' },
+                { xtype: 'noun_detail', id: 'noun_detail' },
             ]
         });
-        App.views.NounsCard.superclass.initComponent.apply(this, arguments);
+        App.views.NounsPacket.superclass.initComponent.apply(this, arguments);
     }
 
 });
 
-Ext.reg('nounscard', App.views.NounsCard);
+Ext.reg('nouns_packet', App.views.NounsPacket);
