@@ -24,7 +24,7 @@ helpers do
     sources << "public/config/#{Sinatra::Application.environment}.js"
 
     %w{models stores views controllers}.each do |layer|
-      sources += Dir.glob("public/app/#{layer}/**")
+      sources += Dir.glob("public/app/#{layer}/**/**.js")
     end
 
     sources.map do |file|
