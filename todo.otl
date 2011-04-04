@@ -1,10 +1,19 @@
 [_] Refactor
-	[_] register xtypes for customized panels
+	[X] register xtypes for customized panels
 	[_] standardise naming for noun cards
 	: need convention for filename, classname, instance and id
-		[_] outer
+		[_] packet
+			: filename: views/nouns/packet.js
+			: classname: NounsPacket
+			: id/xtype: nouns_packet
 		[_] list
+			: filename: views/nouns/list.js
+			: classname: NounsList
+			: id/xtype: nouns_list
 		[_] detail
+			: filename: views/nouns/detail.js
+			: classname: NounDetail
+			: id/xtype: noun_detail
 [_] App
 	[X] add a back button to noun detail card
 		[X] text 'back', using browser history
