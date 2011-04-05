@@ -1,21 +1,9 @@
 [_] App
-	[X] add a back button to noun detail card
-		[X] text 'back', using browser history
-		[X] pressing 'back' should switch to list view without AJAX request
-		[X] switching letters of alphabet should reset the scrolling
-	[X] info on noun detail card
-		[X] seeded by ...
-		[X] no of votes
-		[X] liked by ...
-		[X] styling
-	[X] info on noun listings
-		[X] number of suggestions
-	[X] make sure defailt noun view doesn't override routed noun
-	[X] switch from static to sinatra
-		[X] load templates from files
-		[X] update config.ru
-		[X] set domain from environment
-	[X] refactor noun views/controller
+	[_] nouns
+		[_] fix the noun#detail bug
+		[_] use itemtouch instead of disclosure
+		[_] add an Album (alphabet view) as index
+		[_] ensure that slug containing apostrophe is handled properly
 	[_] create collector detail card
 	[X] add icons
 		[X] favicon
