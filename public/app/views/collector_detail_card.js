@@ -4,7 +4,7 @@ App.views.CollectorDetailCard = Ext.extend(Ext.DataView, {
     scroll: "vertical",
     initComponent: function() {
         Ext.apply(this, {
-            tpl: Ext.XTemplate.from("noun_detail"),
+            tpl: Ext.XTemplate.from("detail_page"),
             itemSelector: 'a.noun',
             store: App.stores.collector_detail
         });

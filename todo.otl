@@ -2,6 +2,13 @@
 	[_] nouns
 		[X] fix the noun#detail bug
 		[_] add an Album (alphabet view) as index
+			[X] route: #nouns            -> album
+			[X] route: #nouns/by/:letter -> index
+			[X] clicking nouns tab activates album
+			[X] fix template bug
+				[X] rename templates/noun_detail to something else
+				[X] assign all stores to App.stores namespace
+			[_] no buttons on the toolbar
 		[_] use itemtap instead of disclosure
 			[X] remove disclosure icon
 			[X] show detail view on itemtap
