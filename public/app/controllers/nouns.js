@@ -2,6 +2,12 @@ App.controllers.nouns = Ext.regController("nouns", {
     model: "Noun",
     currentLetter: "a",
 
+    album: function(options) {
+        App.views.viewport.setActiveItem(App.views.nouns_packet);
+        App.views.nouns_packet.setActiveItem(App.views.nouns_album);
+        App.views.nouns_album.doComponentLayout();
+    },
+
     index: function(options) {
         var letter = options.letter;
         if (letter !== this.currentLetter) {
@@ -18,6 +24,7 @@ App.controllers.nouns = Ext.regController("nouns", {
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);
         App.views.nouns_packet.setActiveItem(App.views.nouns_list);
+        App.views.nouns_list.doComponentLayout();
     },
 
     show: function(options) {
