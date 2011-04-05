@@ -27,6 +27,7 @@ App.controllers.nouns = Ext.regController("nouns", {
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);
         App.views.nouns_packet.setActiveItem(App.views.noun_detail);
+        App.views.noun_detail.doComponentLayout();
     }
 
 
