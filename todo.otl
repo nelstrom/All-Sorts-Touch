@@ -1,22 +1,20 @@
 [_] App
 	[_] nouns
 		[X] fix the noun#detail bug
+		[_] add an Album (alphabet view) as index
 		[_] use itemtap instead of disclosure
 			[X] remove disclosure icon
 			[X] show detail view on itemtap
 			[_] unselect item after pressing 'back'
-		[_] add an Album (alphabet view) as index
 		[_] ensure that slug containing apostrophe is handled properly
+		[_] transitions
+			[_] nouns_list -> noun_detail [slide: left]
+			[_] popular -> noun_detail [slide: left]
+			[_] noun_detail.back -> nouns_list [slide: right]
+			[_] noun_detail.back -> popular [slide: right]
+			[_] URL => noun_detail [no transition]
 	[_] create collector detail card
-	[X] add icons
-		[X] favicon
-		[X] homescreen icon
-			: 72x72
-		[X] splashes
-			[X] phone
-				: 320x460
-			[X] tablet
-				: 768x1004
+	[X] add icon
 
 [X] JS compilation
 	[X] create minified version (use with index.html)
