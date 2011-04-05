@@ -13,14 +13,17 @@ App.views.NounsList = Ext.extend(Ext.List, {
         });
         App.views.NounsList.superclass.initComponent.apply(this, arguments);
     },
-    onItemDisclosure: function(record, btn, index) {
-        var slug = record.data.slug;
-        Ext.dispatch({
-            controller : "nouns",
-            action     : "show",
-            historyUrl : "nouns/" + slug,
-            slug       : slug
-        });
+    listeners: {
+        itemtap: function(dataview, index) {
+            var record = dataview.store.data.items[index],
+                slug = record.data.slug;
+            Ext.dispatch({
+                controller : "nouns",
+                action     : "show",
+                historyUrl : "nouns/" + slug,
+                slug       : slug
+            });
+        }
     }
 });
 
