@@ -1,6 +1,6 @@
 [_] App
 	[_] nouns
-		[_] fix the noun#detail bug
+		[X] fix the noun#detail bug
 		[_] use itemtouch instead of disclosure
 		[_] add an Album (alphabet view) as index
 		[_] ensure that slug containing apostrophe is handled properly
