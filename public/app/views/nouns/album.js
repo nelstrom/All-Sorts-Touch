@@ -6,7 +6,7 @@ App.views.NounsAlbum = Ext.extend(Ext.List, {
             itemTpl: [
                 '{character}'
             ],
-            store: App.alphabet
+            store: App.stores.alphabet
         });
         App.views.NounsAlbum.superclass.initComponent.apply(this, arguments);
     },

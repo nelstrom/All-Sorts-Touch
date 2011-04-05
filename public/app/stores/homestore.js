@@ -1,4 +1,4 @@
-App.home_store = new Ext.data.Store({
+App.stores.home = new Ext.data.Store({
     model: 'Suggestion',
     proxy: {
         type: 'scripttag',

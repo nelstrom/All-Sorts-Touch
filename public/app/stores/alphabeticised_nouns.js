@@ -1,4 +1,4 @@
-App.alphabeticised_nouns = new Ext.data.Store({
+App.stores.alphabeticised_nouns = new Ext.data.Store({
     model: 'Noun',
     proxy: {
         type: 'scripttag',

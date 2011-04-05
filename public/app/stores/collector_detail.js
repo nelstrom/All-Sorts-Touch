@@ -1,4 +1,4 @@
-App.collector_detail = new Ext.data.Store({
+App.stores.collector_detail = new Ext.data.Store({
     model: 'Suggestion',
     proxy: {
         type: 'scripttag',

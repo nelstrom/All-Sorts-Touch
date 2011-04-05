@@ -12,8 +12,8 @@ App.controllers.nouns = Ext.regController("nouns", {
         var letter = options.letter;
         if (letter !== this.currentLetter) {
             if (typeof(letter) == "undefined") { letter = this.currentLetter; }
-            App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
-            App.alphabeticised_nouns.load();
+            App.stores.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
+            App.stores.alphabeticised_nouns.load();
             this.currentLetter = letter;
             if (typeof(App.views.nouns_list.scroller) != "undefined") {
                 App.views.nouns_list.scroller.scrollTo({x: 0, y: 0});
@@ -28,8 +28,8 @@ App.controllers.nouns = Ext.regController("nouns", {
     },
 
     show: function(options) {
-        App.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
-        App.noun_detail.load();
+        App.stores.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
+        App.stores.noun_detail.load();
         App.views.nouns_toolbar.showBackButton();
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);

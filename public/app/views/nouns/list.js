@@ -9,7 +9,7 @@ App.views.NounsList = Ext.extend(Ext.List, {
                 '  <em class="occurences">({occurences})</em>',
                 '</tpl>'
             ],
-            store: App.alphabeticised_nouns
+            store: App.stores.alphabeticised_nouns
         });
         App.views.NounsList.superclass.initComponent.apply(this, arguments);
     },

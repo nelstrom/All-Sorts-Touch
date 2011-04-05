@@ -1,4 +1,4 @@
-App.alphabet = new Ext.data.Store({
+App.stores.alphabet = new Ext.data.Store({
     model: 'Letter',
 	data: [
 		{ character: 'a' },

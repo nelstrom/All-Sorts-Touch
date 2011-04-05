@@ -6,7 +6,7 @@ App.views.CollectorDetailCard = Ext.extend(Ext.DataView, {
         Ext.apply(this, {
             tpl: Ext.XTemplate.from("noun_detail"),
             itemSelector: 'a.noun',
-            store: App.collector_detail
+            store: App.stores.collector_detail
         });
         App.views.CollectorDetailCard.superclass.initComponent.apply(this, arguments);
     }

@@ -6,8 +6,8 @@ Ext.regController("collectors", {
     },
     
     show: function(options) {
-        App.collector_detail.proxy.url = App.domain + "/touch/collectors/" + options.slug + ".json";
-        App.collector_detail.load();
+        App.stores.collector_detail.proxy.url = App.domain + "/touch/collectors/" + options.slug + ".json";
+        App.stores.collector_detail.load();
         App.views.viewport.setActiveItem(App.views.collectorslist);
     }
 });

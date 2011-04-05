@@ -1,4 +1,4 @@
-App.noun_detail = new Ext.data.Store({
+App.stores.noun_detail = new Ext.data.Store({
     model: 'Suggestion',
     proxy: {
         type: 'scripttag',

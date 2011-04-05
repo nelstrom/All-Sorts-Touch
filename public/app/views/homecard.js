@@ -7,7 +7,7 @@ App.views.Homecard = Ext.extend(Ext.DataView, {
         Ext.apply(this, {
             tpl: Ext.XTemplate.from("homecard-list"),
             itemSelector: 'a.noun',
-            store: App.home_store
+            store: App.stores.home
         });
         App.views.Homecard.superclass.initComponent.apply(this, arguments);
     }

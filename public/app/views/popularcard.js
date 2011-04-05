@@ -7,7 +7,7 @@ App.views.Popularcard = Ext.extend(Ext.DataView, {
         Ext.apply(this, {
             tpl: Ext.XTemplate.from("homecard-list"),
             itemSelector: 'a.noun',
-            store: App.popular_store
+            store: App.stores.popular
         });
         App.views.Popularcard.superclass.initComponent.apply(this, arguments);
     }
