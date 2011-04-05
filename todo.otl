@@ -8,11 +8,16 @@
 			[X] fix template bug
 				[X] rename templates/noun_detail to something else
 				[X] assign all stores to App.stores namespace
-			[_] no buttons on the toolbar
+			[X] no buttons on the toolbar
+			[_] add 'back' button to index toolbar (pointing to album)
 		[_] use itemtap instead of disclosure
 			[X] remove disclosure icon
 			[X] show detail view on itemtap
-			[_] unselect item after pressing 'back'
+			[_] unselect list item after pressing 'back'
+				: clearSelectionOnDeactivate is true by default
+				: but the selection is not cleared when the card goes out of
+				: sight. So perhaps it is necessary to 'deactivate' the list,
+				: not just 'hide' it (ie make it not the active card).
 		[_] ensure that slug containing apostrophe is handled properly
 		[_] transitions
 			[_] nouns_list -> noun_detail [slide: left]
