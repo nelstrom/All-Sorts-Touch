@@ -9,15 +9,15 @@ App.controllers.nouns = Ext.regController("nouns", {
             App.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
             App.alphabeticised_nouns.load();
             this.currentLetter = letter;
-            if (typeof(App.views.noun_list.scroller) != "undefined") {
-                App.views.noun_list.scroller.scrollTo({x: 0, y: 0});
+            if (typeof(App.views.nouns_list.scroller) != "undefined") {
+                App.views.nouns_list.scroller.scrollTo({x: 0, y: 0});
             }
         }
 
         App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);
-        App.views.nouns_packet.setActiveItem(App.views.noun_list);
+        App.views.nouns_packet.setActiveItem(App.views.nouns_list);
     },
 
     show: function(options) {
