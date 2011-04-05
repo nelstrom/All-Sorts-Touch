@@ -14,3 +14,13 @@ end
 tab "Watchr" do
   run "watchr js-live-compiler.rb"
 end
+
+tab "All-Sorts.org proxy" do
+  run "cd ~/web/collector"
+  run "ruby application.rb"
+end
+
+tab "Sencha Documentation" do
+  run "cd ~/projects/sencha/releases/sencha-touch-1.1.0/"
+  run "serve 4001"
+end
