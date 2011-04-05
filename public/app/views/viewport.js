@@ -8,10 +8,7 @@ App.views.Viewport = Ext.extend(Ext.TabPanel, {
         }
     },
     dock: 'bottom',
-    cardSwitchAnimation: {
-        type: 'fade',
-        duration: 10
-    },
+    cardSwitchAnimation: false,
     initComponent: function() {
         Ext.apply(this, {
             items: [
