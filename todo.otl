@@ -13,8 +13,17 @@
 			[_] noun_detail.back -> nouns_list [slide: right]
 			[_] noun_detail.back -> popular [slide: right]
 			[_] URL => noun_detail [no transition]
+		[_] alphabet
+			[_] keep track of scroll position for each letter
 	[_] create collector detail card
-	[X] add icon
+	[_] center loading mask vertically/horizontally
+	[_] popular
+		[X] card view
+		[_] list view
+			[_] 50 items
+			[_] auto refresh
+		[_] card/list button in toolbar
+			[_] switch between views with turn transition
 
 [X] JS compilation
 	[X] create minified version (use with index.html)
