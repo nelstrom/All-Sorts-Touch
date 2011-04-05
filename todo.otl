@@ -1,7 +1,10 @@
 [_] App
 	[_] nouns
 		[X] fix the noun#detail bug
-		[_] use itemtouch instead of disclosure
+		[_] use itemtap instead of disclosure
+			[X] remove disclosure icon
+			[X] show detail view on itemtap
+			[_] unselect item after pressing 'back'
 		[_] add an Album (alphabet view) as index
 		[_] ensure that slug containing apostrophe is handled properly
 	[_] create collector detail card
