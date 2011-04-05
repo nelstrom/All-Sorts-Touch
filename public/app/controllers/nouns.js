@@ -3,6 +3,7 @@ App.controllers.nouns = Ext.regController("nouns", {
     currentLetter: "a",
 
     album: function(options) {
+        App.views.nouns_toolbar.showButtonsForAlbumCard(this.currentLetter);
         App.views.viewport.setActiveItem(App.views.nouns_packet);
         App.views.nouns_packet.setActiveItem(App.views.nouns_album);
         App.views.nouns_album.doComponentLayout();
@@ -20,7 +21,7 @@ App.controllers.nouns = Ext.regController("nouns", {
             }
         }
 
-        App.views.nouns_toolbar.setupScrollerButtons(this.currentLetter);
+        App.views.nouns_toolbar.showButtonsForListCard(this.currentLetter);
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);
         App.views.nouns_packet.setActiveItem(App.views.nouns_list);
@@ -30,7 +31,7 @@ App.controllers.nouns = Ext.regController("nouns", {
     show: function(options) {
         App.stores.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
         App.stores.noun_detail.load();
-        App.views.nouns_toolbar.showBackButton();
+        App.views.nouns_toolbar.showButtonsForDetailCard();
         // Note: activate viewport THEN nouns_packet (other way doesn't work)
         App.views.viewport.setActiveItem(App.views.nouns_packet);
         App.views.nouns_packet.setActiveItem(App.views.noun_detail);

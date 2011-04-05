@@ -27,7 +27,8 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
             ]
         }
     ],
-    showBackButton: function() {
+
+    showButtonsForDetailCard: function() {
         var prevButton = Ext.getCmp("prev_noun_letter_button"),
             nextButton = Ext.getCmp("next_noun_letter_button"),
             backButton = Ext.getCmp("back_button");
@@ -37,7 +38,16 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
         backButton.show();
     },
 
-    setupScrollerButtons: function(letter) {
+    showButtonsForAlbumCard: function(letter) {
+        var prevButton = Ext.getCmp("prev_noun_letter_button"),
+            nextButton = Ext.getCmp("next_noun_letter_button"),
+            backButton = Ext.getCmp("back_button");
+        prevButton.hide();
+        nextButton.hide();
+        backButton.hide();
+	},
+
+    showButtonsForListCard: function(letter) {
         var prevButton = Ext.getCmp("prev_noun_letter_button"),
             nextButton = Ext.getCmp("next_noun_letter_button"),
             backButton = Ext.getCmp("back_button"),
