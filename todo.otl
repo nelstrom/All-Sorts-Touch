@@ -1,5 +1,7 @@
 [_] App
 	[_] nouns
+		[X] bugs
+			[X] #nouns to #nouns/by/:letter doesn't show prev/next buttons
 		[X] fix the noun#detail bug
 		[X] add an Album (alphabet view) as index
 			[X] route: #nouns            -> album
