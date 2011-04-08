@@ -2,6 +2,7 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
     initComponent: function() {
         Ext.apply(this, {
             title: "Nouns",
+            buttons: {},
             items: [
                 {
                     id: 'album_button',
@@ -43,47 +44,47 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
                 }
             ],
 
-            showButtonsForDetailCard: function() {
-                var prevButton = Ext.getCmp("prev_noun_letter_button"),
-                    nextButton = Ext.getCmp("next_noun_letter_button"),
-                    albumButton = Ext.getCmp("album_button"),
-                    backButton = Ext.getCmp("back_button");
+            setupButtons: function() {
+                this.buttons.prev = Ext.getCmp("prev_noun_letter_button");
+                this.buttons.next = Ext.getCmp("next_noun_letter_button");
+                this.buttons.back = Ext.getCmp("back_button");
+                this.buttons.album = Ext.getCmp("album_button");
+            },
 
-                prevButton.hide();
-                nextButton.hide();
-                albumButton.hide();
-                backButton.show();
+            showButtonsForDetailCard: function() {
+                this.setupButtons();
+
+                this.buttons.prev.hide();
+                this.buttons.next.hide();
+                this.buttons.album.hide();
+                this.buttons.back.show();
             },
 
             showButtonsForAlbumCard: function(letter) {
-                var prevButton = Ext.getCmp("prev_noun_letter_button"),
-                    nextButton = Ext.getCmp("next_noun_letter_button"),
-                    albumButton = Ext.getCmp("album_button"),
-                    backButton = Ext.getCmp("back_button");
-                prevButton.hide();
-                nextButton.hide();
-                albumButton.hide();
-                backButton.hide();
+                this.setupButtons();
+
+                this.buttons.prev.hide();
+                this.buttons.next.hide();
+                this.buttons.album.hide();
+                this.buttons.back.hide();
             },
 
             showButtonsForListCard: function(letter) {
-                var prevButton = Ext.getCmp("prev_noun_letter_button"),
-                    nextButton = Ext.getCmp("next_noun_letter_button"),
-                    backButton = Ext.getCmp("back_button"),
-                    albumButton = Ext.getCmp("album_button"),
-                    alphabet = "abcdefghijklmnopqrstuvwxyz",
+                var alphabet = "abcdefghijklmnopqrstuvwxyz",
                     prevLetterIndex, nextLetterIndex, currentLetterIndex;
 
                 currentLetterIndex = alphabet.indexOf(letter);
                 prevLetterIndex = currentLetterIndex - 1;
                 nextLetterIndex = currentLetterIndex + 1;
 
-                prevButton.show();
-                nextButton.show();
-                albumButton.show();
-                backButton.hide();
+                this.setupButtons();
 
-                prevButton.handler = function() {
+                this.buttons.prev.show();
+                this.buttons.next.show();
+                this.buttons.album.show();
+                this.buttons.back.hide();
+
+                this.buttons.prev.handler = function() {
                     Ext.dispatch({
                         controller: "nouns",
                         action    : "index",
@@ -91,7 +92,7 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
                         historyUrl: "nouns/by/" + alphabet[prevLetterIndex]
                     });
                 }
-                nextButton.handler = function() {
+                this.buttons.next.handler = function() {
                     Ext.dispatch({
                         controller: "nouns",
                         action    : "index",
@@ -101,6 +102,7 @@ App.views.nouns_toolbar = Ext.extend(Ext.Toolbar, {
                 }
             }
         });
+
         App.views.nouns_toolbar.superclass.initComponent.apply(this, arguments);
     }
 });
