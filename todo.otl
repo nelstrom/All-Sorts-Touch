@@ -3,29 +3,12 @@
 		[_] bugs
 			[X] #nouns to #nouns/by/:letter doesn't show prev/next buttons
 			[_] ensure that slug containing apostrophe is handled properly
-		[X] add an Album (alphabet view) as index
-			[X] route: #nouns            -> album
-			[X] route: #nouns/by/:letter -> index
-			[X] clicking nouns tab activates album
-			[X] fix template bug
-				[X] rename templates/noun_detail to something else
-				[X] assign all stores to App.stores namespace
-			[X] no buttons on the toolbar
-			[X] add 'album' button to index toolbar (pointing to album)
-		[_] use itemtap instead of disclosure
-			[X] remove disclosure icon
-			[X] show detail view on itemtap
-			[_] unselect list item after pressing 'back'
-				: clearSelectionOnDeactivate is true by default
-				: but the selection is not cleared when the card goes out of
-				: sight. So perhaps it is necessary to 'deactivate' the list,
-				: not just 'hide' it (ie make it not the active card).
 		[_] transitions
-			[_] nouns_list -> noun_detail [slide: left]
 			[_] popular -> noun_detail [slide: left]
-			[_] noun_detail.back -> nouns_list [slide: right]
 			[_] noun_detail.back -> popular [slide: right]
-			[_] URL => noun_detail [no transition]
+			[X] nouns_list -> noun_detail [slide: left]
+			[X] noun_detail.back -> nouns_list [slide: right]
+			[X] URL => noun_detail [no transition]
 		[_] alphabet
 			[_] keep track of scroll position for each letter
 	[_] create collector detail card
