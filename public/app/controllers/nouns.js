@@ -4,14 +4,10 @@ App.controllers.nouns = Ext.regController("nouns", {
     lastAction: null,
 
     album: function(options) {
-        var animation = {};
+        var animation = null;
 
         if (this.lastAction === "album") {
             animation = {type: 'slide', direction: 'left'};
-        } else if (this.lastAction === "show") {
-            animation = {type: 'slide', direction: 'right'};
-        } else {
-            animation = null;
         }
 
         this.lastAction = "album";
@@ -23,7 +19,7 @@ App.controllers.nouns = Ext.regController("nouns", {
 
     index: function(options) {
         var letter = options.letter,
-            animation = {type: 'slide', direction: 'left'};
+            animation = null;
         if (letter !== this.currentLetter) {
             if (typeof(letter) == "undefined") { letter = this.currentLetter; }
             App.stores.alphabeticised_nouns.proxy.url = App.domain + '/touch/nouns/by/'+letter+'.json'
@@ -38,8 +34,6 @@ App.controllers.nouns = Ext.regController("nouns", {
             animation = {type: 'slide', direction: 'left'};
         } else if (this.lastAction === "show") {
             animation = {type: 'slide', direction: 'right'};
-        } else {
-            animation = null;
         }
 
         this.lastAction = "index";
@@ -51,14 +45,13 @@ App.controllers.nouns = Ext.regController("nouns", {
     },
 
     show: function(options) {
-        var animation = {};
+        var animation = null;
+
         App.stores.noun_detail.proxy.url = App.domain + "/touch/nouns/" + options.slug + ".json";
         App.stores.noun_detail.load();
 
         if (this.lastAction === "index") {
             animation = {type: 'slide', direction: 'left'};
-        } else {
-            animation = null;
         }
 
         this.lastAction = "show";
@@ -68,6 +61,5 @@ App.controllers.nouns = Ext.regController("nouns", {
         App.views.nouns_packet.setActiveItem(App.views.noun_detail, animation);
         App.views.noun_detail.doComponentLayout();
     }
-
 
 });
