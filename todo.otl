@@ -1,8 +1,8 @@
 [_] App
 	[_] nouns
-		[X] bugs
+		[_] bugs
 			[X] #nouns to #nouns/by/:letter doesn't show prev/next buttons
-		[X] fix the noun#detail bug
+			[_] ensure that slug containing apostrophe is handled properly
 		[X] add an Album (alphabet view) as index
 			[X] route: #nouns            -> album
 			[X] route: #nouns/by/:letter -> index
@@ -20,7 +20,6 @@
 				: but the selection is not cleared when the card goes out of
 				: sight. So perhaps it is necessary to 'deactivate' the list,
 				: not just 'hide' it (ie make it not the active card).
-		[_] ensure that slug containing apostrophe is handled properly
 		[_] transitions
 			[_] nouns_list -> noun_detail [slide: left]
 			[_] popular -> noun_detail [slide: left]
